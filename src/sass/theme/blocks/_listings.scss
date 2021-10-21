@@ -1,0 +1,10 @@
+.listings {
+	margin: 0 auto;
+	max-width: 1500px;
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

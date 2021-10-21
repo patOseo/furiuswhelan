@@ -1,0 +1,13 @@
+.reviews {
+	.review {
+		font-family: $headings-font-family;
+		font-weight: 100;
+		font-size: 1.25rem;
+		line-height: 1.5rem;
+		color: $black;
+	}
+	.review-name {
+		font-family: "Dancing Script", arial, sans-serif;
+		font-size: 1.25rem;
+	}
+}

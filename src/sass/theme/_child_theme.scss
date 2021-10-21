@@ -1,0 +1,20 @@
+// Global
+@import "fonts";
+
+// Layout 
+@import "layouts/body";
+@import "layouts/header";
+@import "layouts/footer";
+
+// Templates
+@import "templates/home";
+
+// Components
+@import "components/gallery";
+@import "components/card";
+@import "components/forms";
+
+// Blocks
+@import "blocks/listings";
+@import "blocks/sold-listings";
+@import "blocks/reviews";

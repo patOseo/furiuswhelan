@@ -1,0 +1,12 @@
+// Gallery
+
+.blocks-gallery-grid {
+	.blocks-gallery-item {
+		img {
+			transition: 0.2s;
+			&:hover {
+				transform: scale(1.025);
+			}
+		}
+	}
+}

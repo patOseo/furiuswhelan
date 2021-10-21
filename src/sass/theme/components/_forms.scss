@@ -1,0 +1,16 @@
+.gform_button {
+	padding: .5rem 1rem;
+	background: darken($primary, 20%);
+	border: 0;
+	border-radius: 6px;
+	color: $white;
+	font-family: $headings-font-family;
+
+	&:hover {
+		background: darken($primary, 30%);
+	}
+}
+
+.gform_title {
+	font-size: 1.5rem;
+}

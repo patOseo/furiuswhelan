@@ -1,0 +1,32 @@
+.hero-section {
+	background: linear-gradient(45deg,#ffffff,#e3e3e3);
+	p {
+		color: $royalblue;
+	}
+}
+
+.navbar {
+	background: $royalblue;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: $white;
+
+	&:hover {
+		color: darken($white, 20%);
+	}
+
+	.active {
+		&:hover {
+			color: darken($white, 20%);
+		}
+	}
+}
+
+.navbar-dark .navbar-nav .btn .nav-link {
+	color: $royalblue;
+}
+
+#menu-item-dropdown-23 {
+	color: rgba(255,255,255,.5);
+}
