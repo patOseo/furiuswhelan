@@ -22,7 +22,7 @@ if(have_rows('sold_listings', 'option')): ?>
 	
 				<?php $image = get_sub_field('sold_image');  ?>
 				<div class="col-md-6">
-					<div class="sold-listing mb-5"><?php echo wp_get_attachment_image($image, 'full'); ?></div>
+					<div class="sold-listing mb-5 text-center"><?php echo wp_get_attachment_image($image, 'full'); ?></div>
 				</div>
 	
 			<?php endwhile; ?>
