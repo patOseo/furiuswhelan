@@ -31,11 +31,11 @@ $email = get_field('email', 'option');
 
 		<div class="row justify-content-center">
 
-			<div class="col-4">
+			<!-- <div class="col-4">
 				<div class="newsletter text-center mb-5">
 					<?php echo do_shortcode('[gravityform id="1" title="true" description="false"]'); ?>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="col-md-12">
 
