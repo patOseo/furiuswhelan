@@ -12,17 +12,23 @@ if(get_field('type') == 'residential' || get_field('type') == 'commercial') {
 	$type = array('residential', 'commercial');
 }
 
+if(get_field('listing_status') == 'sale' || get_field('listing_status') == 'under_contract') {
+	$status = get_field('listing_status');
+} else {
+	$status = array('sale', 'under_contract');
+}
+
 
 $args = array(
 
 	'post_type' 		=> 'listings',
 	'orderby' 			=> 'date',
-	'order' 			=> 'ASC',
+	'order' 			=> 'DESC',
 	'posts_per_page' 	=> $num_posts,
 	'meta_query' 		=> array(
 								array(
 									'key' 			=> 'status',
-									'value' 		=> array('sale', 'under_contract'),
+									'value' 		=> $status,
 									'compare' 		=> 'IN'
 								),
 								array(
