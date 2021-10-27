@@ -9,7 +9,7 @@ $result = getResponse(REMAX_API_URL, $token);
 echo count($result);
 
 foreach($result as $property) {
-    echo "<p>{$property->propertyTitle}</p>";
+    echo "<p>{$property->propertyTitle}<br>Sale Price: CI$ {$property->salePrice}</p>";
 }
 
 
