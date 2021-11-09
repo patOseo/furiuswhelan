@@ -79,6 +79,18 @@ function acf_custom_blocks() {
 			'mode' 				=> 'edit',
 			'keywords'			=> array( 'pdf', 'updates'),
 		));
+
+		// accordion block
+		acf_register_block(array(
+			'name'				=> 'accordion',
+			'title'				=> __('Accordion'),
+			'description'		=> __('A custom block to display a FAQ-style accordion.'),
+			'mode'				=> 'edit',
+			'render_template'	=> 'block-templates/block-accordion.php',
+			'category'			=> 'custom-blocks',
+			'icon'				=> 'excerpt-view',
+			'keywords'			=> array( 'faq', 'accordion' ),
+		));
 	}
 }
 

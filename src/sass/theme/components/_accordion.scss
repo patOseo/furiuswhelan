@@ -1,0 +1,22 @@
+#accordion {
+	button {
+		outline: 0 !important;
+	}
+	.fa-plus {
+		display: none;
+	}
+
+	.fa-minus {
+		display: inline-block;
+	}
+
+	.collapsed {
+		.fa-plus {
+			display: inline-block;
+		}
+
+		.fa-minus {
+			display: none;
+		}
+	}
+}

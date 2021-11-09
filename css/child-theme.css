@@ -14828,6 +14828,22 @@ body .wp-block-columns:not(.alignfull) {
   font-size: 1.5rem;
 }
 
+#accordion button {
+  outline: 0 !important;
+}
+#accordion .fa-plus {
+  display: none;
+}
+#accordion .fa-minus {
+  display: inline-block;
+}
+#accordion .collapsed .fa-plus {
+  display: inline-block;
+}
+#accordion .collapsed .fa-minus {
+  display: none;
+}
+
 .listings {
   margin: 0 auto;
   max-width: 1500px;
