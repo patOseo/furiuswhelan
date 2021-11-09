@@ -7,7 +7,7 @@ $htmltagclose = "</" . $htmltag . ">";
 
 <?php if(have_rows('accordion')): ?>
 
-	<div id="accordion">
+	<div id="accordion" class="my-3">
 		<?php $i = 1; while(have_rows('accordion')): the_row(); ?>
 
 			<div class="card mb-2">

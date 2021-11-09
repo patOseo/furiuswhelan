@@ -14828,8 +14828,9 @@ body .wp-block-columns:not(.alignfull) {
   font-size: 1.5rem;
 }
 
-#accordion button {
+#accordion button:focus {
   outline: 0 !important;
+  box-shadow: none;
 }
 #accordion .fa-plus {
   display: none;

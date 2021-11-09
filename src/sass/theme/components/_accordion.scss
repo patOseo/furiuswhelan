@@ -1,6 +1,10 @@
 #accordion {
 	button {
-		outline: 0 !important;
+		&:focus {
+			outline: 0 !important;
+			box-shadow: none;
+		}
+		
 	}
 	.fa-plus {
 		display: none;
