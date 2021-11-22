@@ -6,7 +6,7 @@ $token = '7a4ebf4014ad4cd4b91603bec1a97eb25ca20a25d6469d565b1f83f7f8f27e9f';
 
 $result = getResponse(REMAX_API_URL, $token);
 
-$fp = fopen('wp-content/themes/furiuswhelan/api/listings.csv', 'w');
+$fp = fopen('../api/listings.csv', 'w');
 
 $data = array();
 
