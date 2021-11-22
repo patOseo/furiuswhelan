@@ -70,7 +70,7 @@ $imgs = explode(', ', $images);
 		<div class="row mb-3">
 
 			<div class="col-12">
-				<small><a href="/all-listings/"><i class="fa fa-chevron-left"></i> Back to Search</a></small>
+				<small><a href="/all-listings/#listings"><i class="fa fa-chevron-left"></i> Back to Search</a></small>
 			</div>
 
 		</div><!-- .row -->

@@ -31,7 +31,6 @@ $properties = get_posts(
 
 
 $all_districts = array();
-$all_types = array();
 
 foreach($properties as $post) {
 	setup_postdata( $post );
@@ -41,7 +40,7 @@ foreach($properties as $post) {
 }
 
 $districts = array_unique($all_districts);
-$proptypes = array_unique($all_types);
+$proptypes = array("Residential", "Multi-Unit", "Land", "Commercial", "Business");
 $views = array('Water View', 'Water Front', 'Golf View', 'Garden View', 'Canal Front', 'Canal View', 'Beach Front', 'Inland', 'Pool View');
 $prices = array(
 '0_500k' => '$0 - $500K',
@@ -52,16 +51,15 @@ $prices = array(
 );
 
 sort($districts);
-sort($proptypes);
 sort($views);
 
 ?>
 
 <form action="/all-listings/#listings" method="get" class="mb-5">
 	<div class="row">
-		<div class="col-6 col-lg mb-1 px-2">
+		<div class="col-12 col-lg mb-1 px-2">
 			<select name="proptype" id="proptype" class="form-control">
-				<option value="">All Property Types</option>
+				<option value="">All Properties</option>
 				<?php foreach($proptypes as $proptype): ?>
 					<option value="<?= $proptype; ?>" <?php if(isset($get_proptype) && $get_proptype == $proptype) { echo "selected"; } ?>><?= $proptype; ?></option>
 				<?php endforeach; ?>
@@ -100,7 +98,7 @@ sort($views);
 				<?php endforeach; ?>
 			</select>
 		</div>
-		<div class="col-6 col-lg mb-1 px-2">
+		<div class="col-12 col-lg mb-1 px-2">
 			<input type="text" name="propsearch" placeholder="Search MLS#" value="<?php if(isset($get_propsearch) && $get_propsearch) { echo $get_propsearch; }?>" class="form-control">
 		</div>
 		<div class="col-12 col-lg-1 mb-1 px-2 text-center">
