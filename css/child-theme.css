@@ -16692,6 +16692,7 @@ body .wp-block-columns:not(.alignfull) {
 @media (min-width: 576px) {
   .home-hero-section {
     height: 90vh;
+    background-attachment: fixed;
   }
 }
 .home-hero-section h1 {

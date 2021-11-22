@@ -15,6 +15,7 @@
 	min-height: 90vh;
 	@include media-breakpoint-up(sm) {
 		height: 90vh;
+		background-attachment: fixed;
 	}
 	background-image: url('/wp-content/themes/furiuswhelan/images/fw-beachwave.jpg');
 	background-size: cover;
