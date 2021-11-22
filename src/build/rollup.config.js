@@ -25,7 +25,7 @@ const globals = {
 
 
 module.exports = {
-  input: [path.resolve(__dirname, '../js/bootstrap.js'), path.resolve(__dirname, '../js/skip-link-focus-fix.js'), path.resolve(__dirname, '../js/custom-javascript.js')],
+  input: [path.resolve(__dirname, '../js/bootstrap.js'), path.resolve(__dirname, '../js/skip-link-focus-fix.js'), path.resolve(__dirname, '../js/uikit.js'), path.resolve(__dirname, '../js/custom-javascript.js')],
   output: {
     banner,
     file: path.resolve(__dirname, `../../js/${fileDest}`),

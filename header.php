@@ -45,7 +45,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
-	<div class="hero-section pt-2">
+	<?php if(is_page('new-home')): ?>
+		<div class="home-hero-section">
+			<div class="container-fluid h-100">
+				<div class="row h-100 align-items-center text-primary">
+					<div class="col-12 text-center">
+						<img class="mb-4 mx-auto d-block" src="/wp-content/themes/furiuswhelan/images/FW-logo.png" alt="Furius Whelan" width="300" height="300">
+						<img class="mb-2 mx-auto d-block rounded-circle border border-secondary" src="/wp-content/themes/furiuswhelan/images/furius-whelan-circle.jpg" alt="Furius Whelan" width="160" height="160">
+						<h1 class="mb-5 text-center text-royalblue w-100"><?php the_field('tagline', 'option'); ?></h1>
+						<div class="row px-5 justify-content-center">
+							<div class="col-lg-10">	
+								<?php get_template_part('global-templates/listings-form'); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php else: ?>
+		<div class="hero-section pt-2">
 		<div class="container">
 			<div class="row align-items-center text-primary">
 				<div class="col-3 col-sm-2">
@@ -58,6 +76,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div>
 		</div>
 	</div>
+	<?php endif; ?>
+	
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" class="sticky-top">

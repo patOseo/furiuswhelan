@@ -11,11 +11,12 @@ if(have_rows('reviews')): ?>
 		</div>
 		<div class="row">
 			<?php while(have_rows('reviews')): the_row(); ?>
-				<?php 
+				<?php
+					$count = count(get_sub_field('review'));
 					$review = get_sub_field('review');
 					$name = get_sub_field('name');
 				?>
-				<div class="col-sm-6">
+				<div class="<?php if($count == 1) { echo "col-12"; } else { echo "col-sm-6"; } ?> text-center">
 					<div class="review">
 						<?= $review; ?>
 					</div>

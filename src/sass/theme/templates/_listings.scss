@@ -1,0 +1,19 @@
+.listing-card {
+	.card-body {
+		transition: .2s;
+	}
+	&:hover {
+		a {
+			text-decoration: none;
+		}
+
+		.card-body {
+			background: $light;
+		}
+	}
+}
+
+.uk-icon {
+	background: rgb(255 255 255 / 35%);
+    padding: 1rem; 
+}

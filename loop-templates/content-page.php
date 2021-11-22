@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<?php if(!is_front_page()): ?>
+	<?php if(!is_front_page() && !is_page('new-home')): ?>
 
 		<header class="entry-header">
 			<div class="container">

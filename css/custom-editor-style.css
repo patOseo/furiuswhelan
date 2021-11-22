@@ -50,9 +50,11 @@ p {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
+  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -333,7 +335,7 @@ template {
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #a2c3e8;
-  --secondary: #6c757d;
+  --secondary: #23529a;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -427,21 +429,21 @@ template {
 .table-secondary,
 .table-secondary > th,
 .table-secondary > td {
-  background-color: #d6d8db;
+  background-color: #c1cfe3;
 }
 .table-secondary th,
 .table-secondary td,
 .table-secondary thead th,
 .table-secondary tbody + tbody {
-  border-color: #b3b7bb;
+  border-color: #8da5ca;
 }
 
 .table-hover .table-secondary:hover {
-  background-color: #c8cbcf;
+  background-color: #afc1db;
 }
 .table-hover .table-secondary:hover > td,
 .table-hover .table-secondary:hover > th {
-  background-color: #c8cbcf;
+  background-color: #afc1db;
 }
 
 .table-success,
@@ -989,12 +991,12 @@ mark,
 
 .has-secondary-color,
 .has-secondary-color:visited {
-  color: #6c757d;
+  color: #23529a;
 }
 
 .has-secondary-background-color {
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #23529a;
+  border-color: #23529a;
 }
 
 .has-success-color,

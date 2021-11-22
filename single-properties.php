@@ -33,7 +33,6 @@ $dock = get_field('dock');
 $alarm = get_field('security_alarm');
 $gym = get_field('gym');
 $pool = get_field('pool');
-$videos = get_field('videos');
 $images = get_field('images');
 $propertyid = "MLS #" . $mls . ": " . get_the_title();
 
@@ -89,11 +88,22 @@ $imgs = explode(', ', $images);
 							<?php if($price): ?><p class="h2 mb-0"><?php echo $currency . number_format($price); ?></p><?php endif; ?>
 						</div>
 					</div>
-					
 				</div>
 
-				<div class="property-img">
-					<img class="mb-4" src="<?php echo $imgs[0]; ?>" alt="<?php the_title(); ?>">
+				<div class="property-img mb-3">
+					<?php if($images): ?>
+					<div uk-slideshow>
+					    <ul class="uk-slideshow-items">
+					        <?php foreach($imgs as $img): ?>
+					        	<li>
+					        		<img src="<?php echo $img; ?>" alt="<?php the_title(); ?>" uk-cover>
+					        	</li>
+					        <?php endforeach; ?>
+					    </ul>
+					    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+					    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+					</div>
+					<?php endif; ?>
 				</div>
 
 				<h2 class="mb-4 card text-center p-2">Property Information</h2>
@@ -103,7 +113,7 @@ $imgs = explode(', ', $images);
 						<?php if($infoval): ?>
 							<div class="col-6 col-sm-4 col-lg-3 mb-3">
 								<h3 class="pb-2 h4 border-bottom"><?= $info; ?></h3>
-								<p class="h6"><?php if($infoval) { echo $infoval; } else { echo "N/A"; } ?></p>
+								<p class="h6 text-royalblue"><?php if($infoval) { echo $infoval; } else { echo "N/A"; } ?></p>
 							</div>
 						<?php endif; ?>
 					<?php endforeach; ?>
@@ -129,7 +139,7 @@ $imgs = explode(', ', $images);
 						<?php if($featureval != null): ?>
 							<div class="col-6 col-sm-4 col-lg-3 mb-3">
 								<h3 class="pb-2 h4 border-bottom"><?= $feature; ?></h3>
-								<p class="h6"><?php echo $feat; ?></p>
+								<p class="h6 text-royalblue"><?php echo $feat; ?></p>
 							</div>
 						<?php endif; ?>
 					<?php endforeach; ?>

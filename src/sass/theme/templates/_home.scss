@@ -9,3 +9,23 @@
 		width: 100%;
 	}
 }
+
+.home-hero-section {
+	height: auto;
+	min-height: 90vh;
+	@include media-breakpoint-up(sm) {
+		height: 90vh;
+	}
+	background-image: url('/wp-content/themes/furiuswhelan/images/fw-beachwave.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	h1 {
+		@include media-breakpoint-up(lg) {
+			font-size: 3rem;
+		}
+    	color: #fff;
+    	text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
+	}
+}
