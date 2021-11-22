@@ -61,7 +61,7 @@ sort($views);
 	<div class="row">
 		<div class="col-6 col-lg mb-1 px-2">
 			<select name="proptype" id="proptype" class="form-control">
-				<option value="">Property Type</option>
+				<option value="">All Property Types</option>
 				<?php foreach($proptypes as $proptype): ?>
 					<option value="<?= $proptype; ?>" <?php if(isset($get_proptype) && $get_proptype == $proptype) { echo "selected"; } ?>><?= $proptype; ?></option>
 				<?php endforeach; ?>
@@ -69,7 +69,7 @@ sort($views);
 		</div>
 		<div class="col-6 col-lg mb-1 px-2">
 			<select name="district" id="district" class="form-control">
-				<option value="">District</option>
+				<option value="">All Districts</option>
 				<?php foreach($districts as $district): ?>
 					<option value="<?= $district; ?>" <?php if(isset($get_district) && $get_district == $district) { echo "selected"; } ?>><?= $district; ?></option>
 				<?php endforeach; ?>
@@ -77,7 +77,7 @@ sort($views);
 		</div>
 		<div class="col-6 col-lg mb-1 px-2">
 			<select name="beds" id="beds" class="form-control">
-				<option value="">Beds</option>
+				<option value="">Any # Beds</option>
 				<option value="1" <?php if(isset($get_beds) && $get_beds == 1) { echo "selected"; } ?>>1</option>
 				<option value="2" <?php if(isset($get_beds) && $get_beds == 2) { echo "selected"; } ?>>2</option>
 				<option value="3" <?php if(isset($get_beds) && $get_beds == 3) { echo "selected"; } ?>>3</option>
@@ -86,7 +86,7 @@ sort($views);
 		</div>
 		<div class="col-6 col-lg mb-1 px-2">
 			<select name="views" id="views" class="form-control">
-				<option value="">Views</option>
+				<option value="">All Views</option>
 				<?php foreach($views as $view): ?>
 					<option value="<?= $view; ?>" <?php if(isset($get_views) && $get_views == $view) { echo "selected"; } ?>><?= $view; ?></option>
 				<?php endforeach; ?>
@@ -94,14 +94,14 @@ sort($views);
 		</div>
 		<div class="col-6 col-lg mb-1 px-2">
 			<select name="price" id="price" class="form-control">
-				<option value="">Price</option>
+				<option value="">Any Price</option>
 				<?php foreach($prices as $price_key => $price_label): ?>
 					<option value="<?= $price_key; ?>" <?php if(isset($get_price) && $get_price == $price_key) { echo "selected"; } ?>><?= $price_label; ?></option>
 				<?php endforeach; ?>
 			</select>
 		</div>
 		<div class="col-6 col-lg mb-1 px-2">
-			<input type="text" name="propsearch" placeholder="Name / MLS#" value="<?php if(isset($get_propsearch) && $get_propsearch) { echo $get_propsearch; }?>" class="form-control">
+			<input type="text" name="propsearch" placeholder="Search MLS#" value="<?php if(isset($get_propsearch) && $get_propsearch) { echo $get_propsearch; }?>" class="form-control">
 		</div>
 		<div class="col-12 col-lg-1 mb-1 px-2 text-center">
 			<button type="submit" class="btn btn-secondary w-100 text-light"><i class="fa fa-search"></i></button>
