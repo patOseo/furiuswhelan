@@ -16632,6 +16632,15 @@ body .wp-block-columns:not(.alignfull) {
   background: #23529a;
 }
 
+.navbar-brand {
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
 }
@@ -16683,7 +16692,6 @@ body .wp-block-columns:not(.alignfull) {
 
 .home-hero-section {
   height: auto;
-  min-height: 90vh;
   background-image: url("/wp-content/themes/furiuswhelan/images/fw-beachwave.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -16693,6 +16701,14 @@ body .wp-block-columns:not(.alignfull) {
   .home-hero-section {
     height: 90vh;
     background-attachment: fixed;
+  }
+}
+.home-hero-section img {
+  max-width: 120px;
+}
+@media (min-width: 576px) {
+  .home-hero-section img {
+    max-width: none;
   }
 }
 .home-hero-section h1 {

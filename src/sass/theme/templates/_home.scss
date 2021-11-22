@@ -12,7 +12,6 @@
 
 .home-hero-section {
 	height: auto;
-	min-height: 90vh;
 	@include media-breakpoint-up(sm) {
 		height: 90vh;
 		background-attachment: fixed;
@@ -21,6 +20,14 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+
+	img {
+		max-width: 120px;
+
+		@include media-breakpoint-up(sm) {
+			max-width: none;
+		}
+	}
 
 	h1 {
 		@include media-breakpoint-up(lg) {
