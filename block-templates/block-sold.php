@@ -26,7 +26,7 @@ if(have_rows('sold_listings', 'option')): ?>
 							<?php echo wp_get_attachment_image(get_sub_field('sold_image'), 'medium'); ?>
 						</div>
 						<div class="card-body">
-							<h6 class="mb-3 d-block">SOLD!</h6>
+							<h6 class="mb-3 d-block">SOLD!</h6><hr>
 							<h2 class="h5"><?php the_sub_field('title'); ?></h2>
 							<p><strong><?php the_sub_field('price'); ?></strong></p>
 						</div>
