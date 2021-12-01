@@ -44,6 +44,18 @@ function acf_custom_blocks() {
 			'keywords'			=> array( 'listings', 'houses' ),
 		));
 
+		// register Featured Listings block
+		acf_register_block(array(
+			'name'				=> 'featured-listings',
+			'title'				=> __('Featured Listings'),
+			'description'		=> __('A custom block to show featured listings'),
+			'render_template'	=> 'block-templates/block-featured-listings.php',
+			'category'			=> 'custom-blocks',
+			'icon'				=> 'admin-home',
+			'mode' 				=> 'edit',
+			'keywords'			=> array( 'listings', 'houses', 'featured' ),
+		));
+
 		// register Sold block
 		acf_register_block(array(
 			'name'				=> 'sold',

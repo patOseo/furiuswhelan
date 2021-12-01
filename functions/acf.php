@@ -8,5 +8,10 @@ if( function_exists('acf_add_options_page') ) {
 		'icon_url' => 'dashicons-admin-home',
 		'position' => '30'
 	));
+	acf_add_options_page(array(
+		'page_title' => 'Featured Listings',
+		'icon_url' => 'dashicons-admin-home',
+		'position' => '30'
+	));
 	
 }
