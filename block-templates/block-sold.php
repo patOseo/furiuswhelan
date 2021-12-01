@@ -17,12 +17,20 @@ if(have_rows('sold_listings', 'option')): ?>
 				<h2 class="mb-5 text-primary h1"><?php the_field('heading'); ?></h2>
 			</div>
 		</div>
-		<div class="row align-items-center justify-content-center">
+		<div class="row justify-content-center">
 			<?php while(have_rows('sold_listings', 'option')): the_row(); ?>
 	
-				<?php $image = get_sub_field('sold_image');  ?>
-				<div class="col-md-6">
-					<div class="sold-listing mb-5 text-center"><?php echo wp_get_attachment_image($image, 'full'); ?></div>
+				<div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+					<div class="card h-100 listing-card">
+						<div class="card-img-top">
+							<?php echo wp_get_attachment_image(get_sub_field('sold_image'), 'medium'); ?>
+						</div>
+						<div class="card-body">
+							<h6 class="mb-3 d-block">SOLD!</h6>
+							<h2 class="h5"><?php the_sub_field('title'); ?></h2>
+							<p><strong><?php the_sub_field('price'); ?></strong></p>
+						</div>
+					</div>
 				</div>
 	
 			<?php endwhile; ?>
