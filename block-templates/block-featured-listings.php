@@ -2,7 +2,7 @@
 
 $args = array(
 
-	'post_type' 		=> 'properties',
+	'post_type' 		=> 'listings',
 	'orderby' 			=> 'date',
 	'order' 			=> 'DESC',
 	'posts_per_page' 	=> -1,
@@ -11,6 +11,11 @@ $args = array(
 									'key' => 'featured',
 									'value' => '1',
 									'compare' => '='
+								),
+								array(
+									'key' => 'status',
+									'value' => 'active',
+									'compare' => 'LIKE'
 								)
 						   ),
 	'post_status' 		=> 'publish'
@@ -57,7 +62,7 @@ $listings = new WP_Query($args);
 
 			<?php else: ?>
 			
-				<p>There are currently no listings to show.</p>
+				<p>There are currently no featured listings.</p>
 			<?php endif; wp_reset_postdata(); ?>
 		</div>
 	</div>

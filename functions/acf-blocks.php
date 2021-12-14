@@ -80,6 +80,18 @@ function acf_custom_blocks() {
 			'keywords'			=> array( 'reviews', 'testimonials'),
 		));
 
+		// register Sold Listings block
+		acf_register_block(array(
+			'name'				=> 'sold-listings',
+			'title'				=> __('Sold Listings Block'),
+			'description'		=> __('A custom block to show sold listings'),
+			'render_template'	=> 'block-templates/block-sold-listings.php',
+			'category'			=> 'custom-blocks',
+			'icon'				=> 'tag',
+			'mode' 				=> 'edit',
+			'keywords'			=> array( 'sold'),
+		));
+
 		// register PDF block
 		acf_register_block(array(
 			'name'				=> 'pdf',

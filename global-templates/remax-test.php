@@ -19,6 +19,7 @@ foreach($result as $property) { ?>
         <h5 class="mb-0"><?php echo $property->propertyTitle; ?></h5>
         <?php echo $property->details->priceCurrency . " " . number_format($property->details->price); ?>
         <?php echo $property->listingStatus;
+
         ?>
     </p>
 
@@ -31,10 +32,17 @@ foreach($result as $property) { ?>
 
 $data = array();
 
-fputcsv($fp, array("ID", "MLS", "Title", "Currency", "Price", "Type", "listingType", "District", "Description", "Bedrooms", "Bathrooms", "Garage", "Stories", "Zoning", "SquareFt", "Acreage", "YearBuilt", "Views", "Furnished", "Tennis", "Dock", "Alarm", "Gym", "Pool", "Pictures", "Videos"));
+fputcsv($fp, array("ID", "MLS", "Title", "Currency", "Price", "Type", "listingType", "District", "Description", "Bedrooms", "Bathrooms", "Garage", "Stories", "Zoning", "SquareFt", "Acreage", "YearBuilt", "Views", "Furnished", "Tennis", "Dock", "Alarm", "Gym", "Pool", "Pictures", "Videos", "Featured"));
 
 foreach($result as $property) {
 
+    $agents = $property->agents;
+    $agent = implode(',', array_column($agents, 'email'));
+    if(strpos($agent, 'furius') !== false) {
+        $featured = 1;
+    } else {
+        $featured = 0;
+    }
     $pics = $property->pictures;
     $vids = $property->videos;
     $pix = implode(', ', array_column($pics, 'pictureUrl'));
@@ -109,7 +117,8 @@ foreach($result as $property) {
         $gym,
         $pool,
         $pix,
-        $vid
+        $vid,
+        $featured
     );
 }
 

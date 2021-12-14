@@ -17,7 +17,7 @@ $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
 // Setting Up the Main Query arguments
 $args = array(
-	'post_type' 		=> 'properties',
+	'post_type' 		=> array('properties', 'listings'),
 	'status'			=> 'publish',
 	'posts_per_page'	=> 12,
 	'paged' 			=> $paged,
