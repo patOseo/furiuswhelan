@@ -15,7 +15,7 @@ $args = array(
 								array(
 									'key' => 'status',
 									'value' => 'active',
-									'compare' => 'LIKE'
+									'compare' => '='
 								)
 						   ),
 	'post_status' 		=> 'publish'
