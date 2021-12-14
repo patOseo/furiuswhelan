@@ -21,6 +21,13 @@ $args = array(
 	'status'			=> 'publish',
 	'posts_per_page'	=> 12,
 	'paged' 			=> $paged,
+	'meta_query'		=> array(
+		array(
+			'key' => 'status',
+			'value' => 'active',
+			'compare' => '='
+		)
+	)
 );
 
 // Checking the $_GET values from search
