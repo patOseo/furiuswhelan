@@ -115,6 +115,18 @@ function acf_custom_blocks() {
 			'icon'				=> 'excerpt-view',
 			'keywords'			=> array( 'faq', 'accordion' ),
 		));
+
+		// blog list block
+		acf_register_block(array(
+			'name'				=> 'blog posts',
+			'title'				=> __('Blog Posts'),
+			'description'		=> __('A custom block to display blog posts.'),
+			'mode'				=> 'edit',
+			'render_template'	=> 'block-templates/block-bloglist.php',
+			'category'			=> 'custom-blocks',
+			'icon'				=> 'list-view',
+			'keywords'			=> array( 'blog', 'posts' ),
+		));
 	}
 }
 

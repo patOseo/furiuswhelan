@@ -31,6 +31,7 @@ $pdf = get_field('latest_updates_document', 'option');
 			<main class="site-main" id="main">
 
 				<?php
+				echo "test";
 				if ( have_posts() ) {
 					// Start the Loop.
 					while ( have_posts() ) {

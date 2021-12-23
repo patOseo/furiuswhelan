@@ -16699,12 +16699,8 @@ body .wp-block-columns:not(.alignfull) {
 }
 @media (min-width: 576px) {
   .home-hero-section {
-    height: 90vh;
     background-attachment: fixed;
   }
-}
-.home-hero-section img {
-  max-width: 120px;
 }
 @media (min-width: 576px) {
   .home-hero-section img {
@@ -16712,8 +16708,8 @@ body .wp-block-columns:not(.alignfull) {
   }
 }
 .home-hero-section h1 {
-  color: #fff;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  color: #23529a;
+  text-shadow: 2px 2px 20px white;
 }
 @media (min-width: 992px) {
   .home-hero-section h1 {
@@ -16806,6 +16802,7 @@ body .wp-block-columns:not(.alignfull) {
   font-weight: 100;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  font-style: "italic";
   color: #000;
 }
 .reviews .review-name {

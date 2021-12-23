@@ -45,13 +45,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
-	<?php if(is_page('new-home')): ?>
-		<div class="home-hero-section pt-5">
-			<div class="container-fluid h-100">
-				<div class="row h-100 align-items-center text-primary">
+	<?php if(is_front_page()): ?>
+		<div class="home-hero-section py-5">
+			<div class="container-fluid h-100 py-5">
+				<div class="row h-100 align-items-center text-primary py-lg-3">
 					<div class="col-12 text-center">
-						<img class="mb-3 mb-sm-4 mx-2 mx-sm-auto d-inline-block d-sm-block" src="/wp-content/themes/furiuswhelan/images/FW-logo.png" alt="Furius Whelan" width="300" height="300">
-						<img class="mb-3 mb-sm-2 mx-2 mx-sm-auto d-inline-block d-sm-block rounded-circle border border-secondary" src="/wp-content/themes/furiuswhelan/images/furius-whelan-circle.jpg" alt="Furius Whelan" width="160" height="160">
+						<img class="mb-5 mx-2 mx-sm-auto d-inline-block d-sm-block" src="/wp-content/themes/furiuswhelan/images/FW-logo.jpg" alt="Furius Whelan" width="600" height="300">
 						<h1 class="mb-5 text-center text-royalblue w-100"><?php the_field('tagline', 'option'); ?></h1>
 						<div class="row px-5 justify-content-center">
 							<div class="col-lg-10">	

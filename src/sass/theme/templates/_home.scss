@@ -13,7 +13,6 @@
 .home-hero-section {
 	height: auto;
 	@include media-breakpoint-up(sm) {
-		height: 90vh;
 		background-attachment: fixed;
 	}
 	background-image: url('/wp-content/themes/furiuswhelan/images/fw-beachwave.jpg');
@@ -22,7 +21,6 @@
 	background-position: center center;
 
 	img {
-		max-width: 120px;
 
 		@include media-breakpoint-up(sm) {
 			max-width: none;
@@ -33,7 +31,7 @@
 		@include media-breakpoint-up(lg) {
 			font-size: 3rem;
 		}
-    	color: #fff;
-    	text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
+    	color: $royalblue;
+    	text-shadow: 2px 2px 20px rgb(255 255 255);
 	}
 }

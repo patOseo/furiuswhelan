@@ -62,7 +62,7 @@ $listings = new WP_Query($args);
 
 			<?php else: ?>
 			
-				<p>There are currently no featured listings.</p>
+				<p>My featured listings are currently being updated - Why not check out all of ReMax Cayman Islands listings?</p>
 			<?php endif; wp_reset_postdata(); ?>
 		</div>
 	</div>
