@@ -18,7 +18,7 @@ if(have_rows('reviews')): ?>
 				?>
 				<div class="<?php if($count == 1) { echo "col-12"; } else { echo "col-sm-6"; } ?> text-center mb-4">
 					<div class="review">
-						"<?= $review; ?>"
+						<?= $review; ?>
 					</div>
 					<p class="review-name mb-4">
 						<?= $name; ?>
