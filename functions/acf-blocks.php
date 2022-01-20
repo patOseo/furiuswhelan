@@ -56,19 +56,7 @@ function acf_custom_blocks() {
 			'keywords'			=> array( 'listings', 'houses', 'featured' ),
 		));
 
-		// register Sold block
-		acf_register_block(array(
-			'name'				=> 'sold',
-			'title'				=> __('Sold Listings'),
-			'description'		=> __('A custom block to show sold listings'),
-			'render_template'	=> 'block-templates/block-sold.php',
-			'category'			=> 'custom-blocks',
-			'icon'				=> 'tag',
-			'mode' 				=> 'edit',
-			'keywords'			=> array( 'sold'),
-		));
-
-		// register Sold block
+		// register reviews block
 		acf_register_block(array(
 			'name'				=> 'reviews',
 			'title'				=> __('Reviews Listings'),

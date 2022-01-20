@@ -41,7 +41,8 @@ $listings = new WP_Query($args);
 		<div class="row justify-content-center">
 			<?php if($listings->have_posts()): ?>
 				<?php while($listings->have_posts()): $listings->the_post(); ?>
-					<?php 
+					<?php
+						$sold_image = get_field('sold_image', get_the_ID());
 						$images = explode(', ', get_field('images', get_the_ID()));
 						$price = get_field('price', get_the_ID());
 						$currency = get_field('currency', get_the_ID());
@@ -49,7 +50,7 @@ $listings = new WP_Query($args);
 					<div class="col-sm-6 col-md-4 col-xl-3 mb-3">
 						<div class="card h-100 listing-card">
 							<div class="card-img-top">
-								<img src="<?= $images[0]; ?>" alt="<?php the_title(); ?>">
+								<img src="<?php if(isset($sold_image) && $sold_image) { echo $sold_image; } else { echo $images[0]; } ?>" alt="<?php the_title(); ?>">
 							</div>
 							<div class="card-body">
 								<h6 class="h4 mb-3 d-block">SOLD!</h6><hr>
