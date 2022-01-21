@@ -26,6 +26,7 @@ $email = get_field('email', 'option');
 		<div class="row">
 			<div class="col-12">
 				<p class="mb-4 text-center h3">Furius Whelan RE/MAX Cayman Islands</p>
+				<img class="my-5 mx-auto d-block" src="/wp-content/themes/furiuswhelan/images/remax-cayman-islands.png" alt="RE/MAX Cayman Islands" width="229" height="60">
 			</div>
 		</div>
 
