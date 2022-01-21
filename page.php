@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="container-fluid p-0" id="content" tabindex="-1">
 
-		<div class="row">
+		<div class="row mx-0">
 
 			<main class="site-main col-12" id="main">
 

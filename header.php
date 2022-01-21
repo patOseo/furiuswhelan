@@ -50,7 +50,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="container-fluid h-100 py-5">
 				<div class="row h-100 align-items-center text-primary py-lg-3">
 					<div class="col-12 text-center">
-						<img class="mb-5 mx-2 mx-sm-auto d-inline-block d-sm-block" src="/wp-content/themes/furiuswhelan/images/FW-logo.jpg" alt="Furius Whelan" width="500" height="250">
+						<img class="mx-auto mb-5 d-inline-block d-sm-block" src="/wp-content/themes/furiuswhelan/images/FW-logo.jpg" alt="Furius Whelan" width="500" height="250">
 						<img class="my-4 mx-auto d-block" src="/wp-content/themes/furiuswhelan/images/remax-cayman-islands.png" alt="RE/MAX Cayman Islands" width="229" height="60">
 						<h1 class="mb-5 text-center text-royalblue w-100"><?php the_field('tagline', 'option'); ?></h1>
 						<div class="row px-5 justify-content-center">
