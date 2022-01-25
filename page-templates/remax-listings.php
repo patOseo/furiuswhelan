@@ -62,10 +62,32 @@ if( ( isset($get_district) && $get_district )
 }
 		
 if(isset($get_district) && $get_district) {
+
+	$compare = 'IN';
+
+	if($get_district == "East End") {
+		$the_district = array("Colliers", "East Inland", "High Rock", "East End");
+	} elseif($get_district == "The Sister Islands") {
+		$the_district = array("Cayman Brac Centr", "Cayman Brac East", "Cayman Brac West", "Little Cayman East", "Little Cayman West");
+	} elseif($get_district == "Seven Mile Beach") {
+		$the_district = array("W Bay Bch North", "W Bay Bch South");
+	} elseif($get_district == "Seven Mile Beach Corridor") {
+		$the_district = array("W Bay Bch North", "W Bay Bch South", "W Bay North East", "W Bay North West", "W Bay South", "George Town Centr", "George Town Comm", "George Town East", "George Town South");
+	} elseif($get_district == "West Bay") {
+		$the_district = array("W Bay North East", "W Bay North West", "W Bay South");
+	} elseif($get_district == "North Side") {
+		$the_district = array("Midland East", "North Side");
+	} elseif($get_district == "Savannah") {
+		$the_district = array("Lower Valley", "Savannah");
+	} else {
+		$the_district = $get_district;
+		$compare = 'LIKE';
+	}
+
 	$args['meta_query'][] = array(
 		'key' => 'district',
-		'value' => $get_district,
-		'compare' => 'LIKE'
+		'value' => $the_district,
+		'compare' => $compare
 	);
 }
 

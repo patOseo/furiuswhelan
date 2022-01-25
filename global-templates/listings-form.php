@@ -29,9 +29,6 @@ $properties = get_posts(
 	),
 );
 
-
-$all_districts = array();
-
 foreach($properties as $post) {
 	setup_postdata( $post );
 	$all_districts[] = get_field('district');
@@ -39,7 +36,26 @@ foreach($properties as $post) {
 	wp_reset_postdata();
 }
 
-$districts = array_unique($all_districts);
+$districts = array(
+	'Bodden Town',
+	'Breakers',
+	'Cayman Brac',
+	'East End',
+	'George Town',
+	'Little Cayman',
+	'Lower Valley',
+	'North Side',
+	'Prospect',
+	'Rum Point',
+	'Savannah',
+	'Seven Mile Beach',
+	'Seven Mile Beach Corridor',
+	'The Sister Islands',
+	'South Sound',
+	'Spotts',
+	'West Bay'
+);
+
 $proptypes = array("Residential", "Multi-Unit", "Land", "Commercial", "Business");
 $views = array('Water View', 'Water Front', 'Golf View', 'Garden View', 'Canal Front', 'Canal View', 'Beach Front', 'Inland', 'Pool View');
 $prices = array(
