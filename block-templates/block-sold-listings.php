@@ -48,16 +48,8 @@ $listings = new WP_Query($args);
 						$currency = get_field('currency', get_the_ID());
 					?>
 					<div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-						<div class="card h-100 listing-card">
-							<div class="card-img-top">
+						<div class="card listing-card">
 								<img src="<?php if(isset($sold_image) && $sold_image) { echo $sold_image; } else { echo $images[0]; } ?>" alt="<?php the_title(); ?>">
-							</div>
-							<div class="card-body">
-								<h6 class="h4 mb-3 d-block">SOLD!</h6><hr>
-								<p><?php if($price): echo $currency . number_format($price); endif; ?></p>
-								<h2 class="h5"><?php the_title(); ?></h2>
-								
-							</div>
 						</div>
 					</div>
 
