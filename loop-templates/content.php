@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="row align-items-center">
 			<div class="col-5">
-				<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+				<?php echo get_the_post_thumbnail( $post->ID, 'blogthumb' ); ?>
 			</div>
 		
 			<div class="col-7">

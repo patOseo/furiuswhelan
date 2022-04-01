@@ -37,3 +37,4 @@ add_theme_support( 'align-wide' );
 
 require_once('functions/acf-blocks.php');
 require_once('functions/acf.php');
+require_once('functions/image-sizes.php');
