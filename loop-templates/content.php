@@ -9,11 +9,11 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article class="card" id="post-<?php the_ID(); ?>">
+<article class="card mb-3" id="post-<?php the_ID(); ?>">
 
 	<div class="row align-items-center">
 			<div class="col-5">
-				<?php echo get_the_post_thumbnail( $post->ID, 'blogthumb' ); ?>
+				<?php echo get_the_post_thumbnail( $post->ID, 'blogthumb', '', array('class' => 'w-100') ); ?>
 			</div>
 		
 			<div class="col-7">
